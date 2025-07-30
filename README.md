@@ -61,7 +61,7 @@ gofood-mern/
 
 ### 🔧 1. Clone the Repository
 
-git clone https://github.com/NikitaSain20/GoFood
+git clone https://github.com/NikitaSain20/Go-Food-Mern
 cd GoFood
 
 ### 📦 2. Backend Setup
@@ -69,11 +69,6 @@ cd GoFood
 cd backend
 npm install
 npm run start
-
-Create a .env file in /backend:
-PORT=5000
-MONGO_URI=your_mongo_connection_string
-JWT_SECRET=your_jwt_secret
 
 ### 💻 3. Frontend Setup
 
