@@ -18,8 +18,6 @@ export default function Card(props) {
         break;
       }
     }
-    console.log(food);
-    console.log(new Date());
     if (food !== []) {
       if (food.size === size) {
         await dispatch({

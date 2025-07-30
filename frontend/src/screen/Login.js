@@ -21,17 +21,13 @@ export default function Login() {
     });
 
     const json = await response.json();
-    console.log(json);
 
     if (!json.success) {
       alert("enter valid creditentials");
     }
     if (json.success) {
       localStorage.setItem("userEmail", email);
-      console.log(
-        "Email stored in localStorage:",
-        localStorage.getItem("userEmail")
-      );
+
       localStorage.setItem("authtoken", json.authtoken);
       localStorage.getItem("authtoken");
 

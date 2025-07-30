@@ -8,7 +8,6 @@ export default function Home() {
   const [foodCat, setfoodCat] = useState([]);
   const [foodItem, setfoodItem] = useState([]);
   const [search, setSearch] = useState("");
-  console.log(search);
   const loadData = async () => {
     let response = await fetch(`${apiUrl}/display`, {
       method: "POST",
@@ -18,7 +17,6 @@ export default function Home() {
     });
 
     response = await response.json();
-    // console.log(response[0], response[1]);
     setfoodItem(response[0]);
     setfoodCat(response[1]);
   };

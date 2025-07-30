@@ -25,9 +25,7 @@ router.post("/signup", signupValidationRules, async (req, res) => {
   }
 
   const salt = await bcrypt.genSalt(8);
-  console.log(salt);
   let hashpass = await bcrypt.hash(req.body.password, salt);
-  console.log(hashpass);
   try {
     const created = await User.create({
       name: req.body.name,
@@ -35,7 +33,6 @@ router.post("/signup", signupValidationRules, async (req, res) => {
       password: hashpass,
       location: req.body.location,
     });
-    console.log(created);
     res.json({ success: true });
   } catch (error) {
     console.log(error);

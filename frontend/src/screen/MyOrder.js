@@ -3,11 +3,9 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { apiUrl } from "../config/Api";
 export default function MyOrder() {
-  console.log(apiUrl);
   const [orderData, setorderData] = useState({});
 
   const fetchMyOrder = async () => {
-    console.log(localStorage.getItem("userEmail"));
     await fetch(`${apiUrl}/myOrderData`, {
       // credentials: 'include',
       // Origin:"http://localhost:3000/login",
@@ -22,10 +20,6 @@ export default function MyOrder() {
       let response = await res.json();
       await setorderData(response);
     });
-
-    // await res.map((data)=>{
-    //    console.log(data)
-    // })
   };
 
   useEffect(() => {

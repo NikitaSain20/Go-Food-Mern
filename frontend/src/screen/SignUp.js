@@ -27,9 +27,7 @@ export default function SignUp() {
         location: location,
       }),
     });
-    // console.log(response);
     const json = await response.json();
-    console.log(json);
 
     if (!json.success) {
       alert("enter valid creditentials");
