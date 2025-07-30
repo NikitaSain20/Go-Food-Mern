@@ -66,14 +66,14 @@ cd GoFood
 
 ### 📦 2. Backend Setup
 
-cd backend
-npm install
+cd backend <br/>
+npm install <br/>
 npm run start
 
 ### 💻 3. Frontend Setup
 
-cd ../frontend
-npm install
+cd ../frontend <br/>
+npm install <br/>
 npm start
 
 ## 📸 Screenshots
