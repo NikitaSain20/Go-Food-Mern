@@ -30,7 +30,7 @@
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB with Mongoose
 - **Authentication**: JWT
-- **State Management**: Context API / Redux (if used)
+- **State Management**: Redux
 - **Deployment**: Vercel (frontend) & Render/Railway (backend)
 
 ---

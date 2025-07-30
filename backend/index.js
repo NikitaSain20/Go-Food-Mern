@@ -7,6 +7,12 @@ const userRouter = require("./routes/sign_log_user");
 const displayRouter = require("./routes/displayData");
 const orderRouter = require("./routes/orderData");
 mongoDb();
+const cors = require("cors");
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+  })
+);
 
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
