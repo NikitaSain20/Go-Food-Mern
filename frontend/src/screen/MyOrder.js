@@ -33,7 +33,9 @@ export default function MyOrder() {
       </div>
 
       <div className="container py-4">
-        <h2 className="text-center mb-4">Your Order History</h2>
+        <h2 className="text-center mb-4">jhjdfhdrder History</h2>
+        <h2 className="text-center mb-4">jhjdfhdrder History</h2>
+
         {orderData &&
           Array.isArray(orderData) &&
           orderData.map(
