@@ -32,63 +32,66 @@ export default function MyOrder() {
         <Header />
       </div>
 
-      <div className="container">
-        <div className="row">
-          {orderData &&
-            Array.isArray(orderData) &&
-            orderData.map(
-              (data, index) =>
-                data.orderData?.order_data &&
-                data.orderData.order_data
-                  .slice(0)
-                  .reverse()
-                  .map((items, i) => (
-                    <React.Fragment key={`${index}-${i}`}>
-                      {items.map((arrayData, j) => {
-                        if (arrayData.Order_date) {
-                          return (
+      <div className="container py-4">
+        <h2 className="text-center mb-4">Your Order History</h2>
+        {orderData &&
+          Array.isArray(orderData) &&
+          orderData.map(
+            (data, index) =>
+              data.orderData?.order_data &&
+              data.orderData.order_data
+                .slice(0)
+                .reverse()
+                .map((items, i) => (
+                  <div key={`order-group-${index}-${i}`} className="mb-5">
+                    {items.some((item) => item.Order_date) && (
+                      <div className="text-center">
+                        <h4 className="text-primary fw-bold">
+                          {items.find((item) => item.Order_date)?.Order_date}
+                        </h4>
+                        <hr className="w-25 mx-auto" />
+                      </div>
+                    )}
+                    <div className="row g-4 justify-content-center">
+                      {items.map(
+                        (item, j) =>
+                          !item.Order_date && (
                             <div
-                              className="col-12 mt-5"
-                              key={`date-${index}-${i}-${j}`}
-                            >
-                              <h5 className="text-center">
-                                {arrayData.Order_date}
-                              </h5>
-                              <hr />
-                            </div>
-                          );
-                        } else {
-                          return (
-                            <div
-                              className="col-12 col-md-6 col-lg-3"
+                              className="col-12 col-sm-6 col-md-4 col-lg-3"
                               key={`card-${index}-${i}-${j}`}
                             >
-                              <div
-                                className="card mt-3"
-                                style={{ width: "16rem", maxHeight: "360px" }}
-                              >
-                                <div className="card-body">
-                                  <h5 className="card-title">
-                                    {arrayData.name}
+                              <div className="card shadow-sm border-0 h-100">
+                                <div className="card-body d-flex flex-column justify-content-between">
+                                  <h5 className="card-title text-truncate">
+                                    {item.name}
                                   </h5>
-                                  <div
-                                    className="container w-100 p-0 d-flex justify-content-between align-items-center"
-                                    style={{ height: "38px" }}
-                                  >
-                                    <span>{arrayData.qty}</span>
-                                    <span>{arrayData.size}</span>
-                                    <span>₹{arrayData.price}/-</span>
+                                  <div className="d-flex flex-wrap justify-content-between my-2">
+                                    <span className="badge bg-secondary">
+                                      Qty: {item.qty}
+                                    </span>
+                                    <span className="badge bg-info text-dark">
+                                      Size: {item.size}
+                                    </span>
+                                    <span className="badge bg-success">
+                                      ₹{item.price}/-
+                                    </span>
+                                  </div>
+                                  <div className="text-end text-muted small">
+                                    <i className="bi bi-calendar3"></i>{" "}
+                                    {
+                                      items.find((i) => i.Order_date)
+                                        ?.Order_date
+                                    }
                                   </div>
                                 </div>
                               </div>
                             </div>
-                          );
-                        }
-                      })}
-                    </React.Fragment>
-                  ))
-            )}
-        </div>
+                          )
+                      )}
+                    </div>
+                  </div>
+                ))
+          )}
       </div>
 
       <Footer />
