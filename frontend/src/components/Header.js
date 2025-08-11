@@ -92,7 +92,7 @@ export default function Header() {
                 </Link>
                 {cartView ? (
                   <Modal onClose={() => setCartView(false)}>
-                    <Cart></Cart>
+                    <Cart className="h-5"></Cart>
                   </Modal>
                 ) : (
                   ""
