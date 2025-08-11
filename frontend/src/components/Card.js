@@ -10,7 +10,7 @@ export default function Card(props) {
   const [size, setSize] = useState("");
   // let foodItem = props.foodItems;
   const handleAddToCart = async () => {
-    alert("item added to the cart");
+    alert("please login first");
     let food = [];
     for (const item of data) {
       if (item.id === props.foodItem._id) {
