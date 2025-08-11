@@ -168,7 +168,7 @@ export default function MyOrder() {
                       <Skeleton
                         height={20}
                         width="60%"
-                        style={{ marginBottom: "10px" }}
+                        style={{ marginBottom: "10px", color: "white" }}
                       />
                       <div className="d-flex justify-content-between my-3">
                         <Skeleton height={20} width="30%" />
