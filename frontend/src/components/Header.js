@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "./CardReducer";
 import Modal from "../Modal";
 import Cart from "../screen/Cart";
+import CartIcon from "../../public/assets/images/CartIcon";
 
 export default function Header() {
   const data = useCart();
@@ -84,7 +85,7 @@ export default function Header() {
                     setCartView(true);
                   }}
                 >
-                  My Carts
+                  My Carts <CartIcon />
                   <Badge bg="danger" className="ms-2">
                     {data.length}
                   </Badge>
