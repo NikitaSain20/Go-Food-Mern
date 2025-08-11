@@ -85,7 +85,7 @@ export default function Header() {
                     setCartView(true);
                   }}
                 >
-                  <CartIcon />
+                  <ShoppingCart />
                   {/* <Badge bg="danger" className="ms-2"> */}
                   {data.length}
                   {/* </Badge> */}
