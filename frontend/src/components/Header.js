@@ -86,9 +86,9 @@ export default function Header() {
                   }}
                 >
                   <CartIcon />
-                  <Badge bg="danger" className="ms-2">
-                    {data.length}
-                  </Badge>
+                  {/* <Badge bg="danger" className="ms-2"> */}
+                  {data.length}
+                  {/* </Badge> */}
                 </Link>
                 {cartView ? (
                   <Modal onClose={() => setCartView(false)}>
