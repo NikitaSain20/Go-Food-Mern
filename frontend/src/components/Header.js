@@ -85,7 +85,7 @@ export default function Header() {
                     setCartView(true);
                   }}
                 >
-                  My Carts <CartIcon />
+                  <CartIcon />
                   <Badge bg="danger" className="ms-2">
                     {data.length}
                   </Badge>
