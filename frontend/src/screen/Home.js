@@ -303,7 +303,11 @@ export default function Home() {
         {loading ? (
           // ✅ Show skeleton only when loading
           <>
-            <Skeleton height={30} width={200} style={{ marginBottom: 10 }} />
+            <Skeleton
+              height={30}
+              width={200}
+              style={{ marginBottom: 10, color: "white" }}
+            />
             <Skeleton height={150} count={4} />
           </>
         ) : (
