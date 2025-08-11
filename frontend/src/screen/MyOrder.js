@@ -99,7 +99,8 @@
 //     </div>
 //   );
 // }
-
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 import React, { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
@@ -107,7 +108,7 @@ import { apiUrl } from "../config/Api";
 
 export default function MyOrder() {
   const [orderData, setOrderData] = useState([]);
-
+  const [loading, setLoading] = useState(true);
   const fetchMyOrder = async () => {
     try {
       const res = await fetch(`${apiUrl}/myOrderData`, {
@@ -122,6 +123,7 @@ export default function MyOrder() {
       console.log(response, "response");
 
       setOrderData(response.orderData?.order_data || []);
+      setLoading(false);
     } catch (error) {
       console.error("Error fetching orders:", error);
     }
@@ -148,7 +150,38 @@ export default function MyOrder() {
           </span>
         </h2>
 
-        {orderData.length > 0 ? (
+        {loading ? (
+          // Skeleton Loader While Fetching
+          <div className="row g-4 justify-content-center">
+            {Array(4)
+              .fill()
+              .map((_, index) => (
+                <div
+                  className="col-12 col-sm-6 col-md-4 col-lg-3"
+                  key={`skeleton-${index}`}
+                >
+                  <div
+                    className="card border-0 shadow-lg h-100"
+                    style={{ borderRadius: "15px" }}
+                  >
+                    <div className="card-body">
+                      <Skeleton
+                        height={20}
+                        width="60%"
+                        style={{ marginBottom: "10px" }}
+                      />
+                      <div className="d-flex justify-content-between my-3">
+                        <Skeleton height={20} width="30%" />
+                        <Skeleton height={20} width="30%" />
+                        <Skeleton height={20} width="30%" />
+                      </div>
+                      <Skeleton height={15} width="50%" />
+                    </div>
+                  </div>
+                </div>
+              ))}
+          </div>
+        ) : orderData.length > 0 ? (
           orderData
             .slice(0)
             .reverse()
