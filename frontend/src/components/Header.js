@@ -88,7 +88,7 @@ export default function Header() {
                   hello
                   {/* <ShoppingCart /> */}
                   {/* <Badge bg="danger" className="ms-2"> */}
-                  {data.length}
+                  {/* {data.length} */}
                   {/* </Badge> */}
                 </Link>
                 {cartView ? (
