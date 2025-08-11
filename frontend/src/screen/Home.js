@@ -76,18 +76,37 @@ export default function Home() {
       </div>
 
       {/* Food Categories & Items */}
-      <div className="container m-3">
+      <div className="container my-3">
         {loading ? (
           // Skeleton while loading
           <>
-            <Skeleton height={30} width={200} style={{ marginBottom: 10 }} />
-            <div className="row">
-              {[...Array(4)].map((_, i) => (
-                <div className="col-12 col-md-6 col-lg-3 mb-3" key={i}>
-                  <Skeleton height={200} />
-                </div>
-              ))}
-            </div>
+            {[...Array(3)].map((_, catIndex) => (
+              <div className="row mb-3" key={catIndex}>
+                {/* Category Title Skeleton */}
+                <Skeleton
+                  height={30}
+                  width={200}
+                  style={{ marginBottom: 10 }}
+                />
+                <hr />
+
+                {/* Card Skeletons */}
+                {[...Array(4)].map((_, cardIndex) => (
+                  <div
+                    className="col-12 col-md-6 col-lg-3 mb-3"
+                    key={cardIndex}
+                  >
+                    <Skeleton height={200} style={{ borderRadius: "10px" }} />
+                    <Skeleton
+                      height={20}
+                      width="80%"
+                      style={{ marginTop: 10 }}
+                    />
+                    <Skeleton height={20} width="60%" />
+                  </div>
+                ))}
+              </div>
+            ))}
           </>
         ) : (
           // Actual data after loading
