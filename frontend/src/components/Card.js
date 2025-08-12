@@ -14,7 +14,7 @@ export default function Card(props) {
   const finalPrice = qty * parseInt(Options[size]);
 
   const handleAddToCart = async () => {
-    const token = localStorage.getItem("authToken");
+    const token = localStorage.getItem("authtoken");
     if (!token) {
       alert("Please Sign Up or log in first to add items to the cart.");
       return;
