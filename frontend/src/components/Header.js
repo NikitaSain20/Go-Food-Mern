@@ -78,13 +78,13 @@ export default function Header() {
             ) : (
               <div className="d-flex me-5">
                 <Link
-                  class="text-danger fs-5 mx-2 btn btn-light fw-bold p-2"
+                  class="text-success fs-2 mx-2 btn btn-light fw-bold p-2"
                   to="/"
                   onClick={() => {
                     setCartView(true);
                   }}
                 >
-                  <i class="bi bi-cart-dash-fill"></i>
+                  <i class="bi bi-cart-dash-fill f-5"></i>
                   {/* <ShoppingCarzzt /> */}
                   {/* <Badge bg="danger" className="ms-2"> */}
                   {/* {data.length} */}
