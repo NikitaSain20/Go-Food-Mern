@@ -84,7 +84,7 @@ export default function Header() {
                     setCartView(true);
                   }}
                 >
-                  <i class="bi bi-cart-dash-fill f-5"></i>
+                  <i class="bi bi-cart-dash-fill f-3"></i>
                   {/* <ShoppingCarzzt /> */}
                   {/* <Badge bg="danger" className="ms-2"> */}
                   {/* {data.length} */}
