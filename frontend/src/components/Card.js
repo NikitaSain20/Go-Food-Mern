@@ -14,6 +14,11 @@ export default function Card(props) {
   const finalPrice = qty * parseInt(Options[size]);
 
   const handleAddToCart = async () => {
+    const token = localStorage.getItem("authToken");
+    if (!token) {
+      alert("Please log in first to add items to the cart.");
+      return;
+    }
     // Your existing add-to-cart logic
     let food = [];
     for (const item of data) {
