@@ -116,7 +116,7 @@ export default function Card(props) {
           <div
             style={{
               position: "absolute",
-              top: "50px",
+              bottom: "20px",
               left: "50%",
               transform: "translateX(-50%)",
               background: "#d4edda",
