@@ -23,16 +23,23 @@ export default function Login() {
     const json = await response.json();
     console.log(json);
 
-    if (!json.success) {
-      alert("enter valid creditentials");
-    }
-    if (json.success) {
-      localStorage.setItem("userEmail", email);
+    // if (!json.success) {
+    //   alert("enter valid creditentials");
+    // }
+    // if (json.success) {
+    //   localStorage.setItem("userEmail", email);
 
+    //   localStorage.setItem("authtoken", json.authtoken);
+    //   const token = localStorage.getItem("authtoken");
+    //   console.log(token);
+    //   navigate("/");
+    // }
+    if (json.success) {
       localStorage.setItem("authtoken", json.authtoken);
-      const token = localStorage.getItem("authtoken");
-      console.log(token);
+      console.log("Stored token:", localStorage.getItem("authtoken"));
       navigate("/");
+    } else {
+      alert("Enter valid credentials");
     }
   };
 
