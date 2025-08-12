@@ -103,7 +103,7 @@ export default function Card(props) {
             </select>
             <div className="d-inline fs-5">Rs{finalPrice}/-</div>
             <hr className="text-dark fw-bolder"></hr>
-            <div className="d-flex flex-row justify-center">
+            <div className="d-flex justify-content-center">
               <button className="btn btn-danger" onClick={handleAddToCart}>
                 ADD TO CART
               </button>
