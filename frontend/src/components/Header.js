@@ -79,7 +79,7 @@ export default function Header() {
             ) : (
               <div className="d-flex me-5">
                 <Link
-                  class="text-success fs-5 mx-2 btn btn-light fw-bold p-2"
+                  class="text-danger fs-5 mx-2 btn btn-light fw-bold p-2"
                   to="/"
                   onClick={() => {
                     setCartView(true);
