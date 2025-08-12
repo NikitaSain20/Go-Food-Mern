@@ -84,10 +84,10 @@ export default function Header() {
                     setCartView(true);
                   }}
                 >
-                  <i class="bi bi-cart-dash-fill f-3 relative"></i>
+                  <i class="bi bi-cart-dash-fill f-3 position-relative"></i>
                   {/* <ShoppingCarzzt /> */}
                   {/* <Badge bg="danger" className="ms-2"> */}
-                  <span className="text-success fs-5 absolute">
+                  <span className="text-success fs-5 position-absolute top-0">
                     {data.length}
                   </span>
                   {/* </Badge> */}
