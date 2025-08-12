@@ -29,8 +29,8 @@ export default function Login() {
       localStorage.setItem("userEmail", email);
 
       localStorage.setItem("authtoken", json.authtoken);
-      localStorage.getItem("authtoken");
-
+      const token = localStorage.getItem("authtoken");
+      console.log(token);
       navigate("/");
     }
   };
