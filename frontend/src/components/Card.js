@@ -123,7 +123,7 @@ export default function Card(props) {
               color: "#155724",
               padding: "10px",
               borderRadius: "4px",
-              fontSize: "14px",
+              fontSize: "30px",
               boxShadow: "0px 2px 5px rgba(0,0,0,0.2)",
             }}
           >
