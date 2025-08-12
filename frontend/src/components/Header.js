@@ -84,8 +84,8 @@ export default function Header() {
                     setCartView(true);
                   }}
                 >
-                  hello
-                  {/* <ShoppingCart /> */}
+                  <i class="bi bi-cart-dash-fill"></i>
+                  {/* <ShoppingCarzzt /> */}
                   {/* <Badge bg="danger" className="ms-2"> */}
                   {/* {data.length} */}
                   {/* </Badge> */}
@@ -97,12 +97,12 @@ export default function Header() {
                 ) : (
                   ""
                 )}
-                <h1>hello</h1>
+
                 <button
-                  class="text-success fs-5 mx-2 btn btn-light fw-bold p-2"
+                  class="text-danger fs-5 mx-2 btn btn-light fw-bold p-2"
                   onClick={handlelogout}
                 >
-                  loginzzndfbfn
+                  LOGOUT
                 </button>
               </div>
             )}
