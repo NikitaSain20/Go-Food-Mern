@@ -4,7 +4,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "./CardReducer";
 import Modal from "../Modal";
 import Cart from "../screen/Cart";
-import CartIcon from "../../public/assets/images/CartIcon";
 
 export default function Header() {
   const data = useCart();
@@ -98,12 +97,12 @@ export default function Header() {
                 ) : (
                   ""
                 )}
-
+                <h1>hello</h1>
                 <button
-                  class="text-danger fs-5 mx-2 btn btn-light fw-bold p-2"
+                  class="text-success fs-5 mx-2 btn btn-light fw-bold p-2"
                   onClick={handlelogout}
                 >
-                  LOGOUT
+                  loginzzndfbfn
                 </button>
               </div>
             )}
