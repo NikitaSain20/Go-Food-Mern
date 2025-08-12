@@ -87,7 +87,7 @@ export default function Header() {
                   <i class="bi bi-cart-dash-fill f-3"></i>
                   {/* <ShoppingCarzzt /> */}
                   {/* <Badge bg="danger" className="ms-2"> */}
-                  {/* {data.length} */}
+                  {data.length}
                   {/* </Badge> */}
                 </Link>
                 {cartView ? (
