@@ -16,7 +16,7 @@ export default function Card(props) {
   const handleAddToCart = async () => {
     const token = localStorage.getItem("authToken");
     if (!token) {
-      alert("Please log in first to add items to the cart.");
+      alert("Please Sign Up or log in first to add items to the cart.");
       return;
     }
     // Your existing add-to-cart logic
