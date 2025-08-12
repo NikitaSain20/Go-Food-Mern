@@ -116,12 +116,12 @@ export default function Card(props) {
           <div
             style={{
               position: "absolute",
-              top: "10px",
+              top: "50px",
               left: "50%",
               transform: "translateX(-50%)",
               background: "#d4edda",
               color: "#155724",
-              padding: "50px",
+              padding: "10px",
               borderRadius: "4px",
               fontSize: "14px",
               boxShadow: "0px 2px 5px rgba(0,0,0,0.2)",
