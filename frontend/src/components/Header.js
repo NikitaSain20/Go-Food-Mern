@@ -39,7 +39,7 @@ export default function Header() {
             <ul className="navbar-nav me-auto">
               <li>
                 <Link
-                  class="nav-link text-white fs-4 fw-bold"
+                  class="nav-link text-white fs-4 fw-bold mx-5"
                   aria-current="page"
                   to="/"
                 >
@@ -61,22 +61,21 @@ export default function Header() {
               )}
             </ul>
             {!localStorage.getItem("authtoken") ? (
-              <div className="d-flex me-5">
+              <div className="d-flex mx-5">
                 <Link
-                  class="text-success fs-5 mx-2 btn btn-light fw-bold p-2"
+                  class="text-success fs-5 mx-4 btn btn-light fw-bold p-2"
                   to="/signup"
                 >
                   SignUp
                 </Link>
                 <Link
-                  class="text-success fs-5 mx-2 btn btn-light fw-bold p-2"
+                  class="text-success fs-5 mx-4 btn btn-light fw-bold p-2"
                   to="/login"
                 >
                   Login
                 </Link>
               </div>
             ) : (
-              <div className="d-flex me-5">
                 <Link
                   class="text-white fs-2 mx-2 btn  fw-bold p-2"
                   to="/"
