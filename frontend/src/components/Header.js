@@ -78,7 +78,7 @@ export default function Header() {
             ) : (
               <div className="d-flex me-5">
                 <Link
-                  class="text-success fs-2 mx-2 btn  fw-bold p-2"
+                  class="text-white fs-2 mx-2 btn  fw-bold p-2"
                   to="/"
                   onClick={() => {
                     setCartView(true);
@@ -99,7 +99,7 @@ export default function Header() {
                 )}
 
                 <button
-                  class="text-danger fs-5 mx-2 btn  fw-bold p-2"
+                  class="text-white fs-5 mx-2 btn  fw-bold p-2"
                   onClick={handlelogout}
                 >
                   LOGOUT
