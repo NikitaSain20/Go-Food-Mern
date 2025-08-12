@@ -103,7 +103,7 @@ export default function Card(props) {
             </select>
             <div className="d-inline fs-5">Rs{finalPrice}/-</div>
             <hr className="text-dark fw-bolder"></hr>
-            <div className="d-flex flex-row">
+            <div className="d-flex flex-row justify-center">
               <button className="btn btn-danger" onClick={handleAddToCart}>
                 ADD TO CART
               </button>
@@ -116,7 +116,7 @@ export default function Card(props) {
           <div
             style={{
               position: "absolute",
-              bottom: "20px",
+              bottom: "40px",
               left: "50%",
               transform: "translateX(-50%)",
               background: "#d4edda",
