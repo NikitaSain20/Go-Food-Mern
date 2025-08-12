@@ -87,7 +87,7 @@ export default function Header() {
                   <i class="bi bi-cart-dash-fill f-3 position-relative"></i>
                   {/* <ShoppingCarzzt /> */}
                   {/* <Badge bg="danger" className="ms-2"> */}
-                  <span className="text-success fs-5 position-absolute top-25 mb-5">
+                  <span className="text-success fs-5 position-absolute top-25 mb-5 bg-white p-5">
                     {data.length}
                   </span>
                   {/* </Badge> */}
