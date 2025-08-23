@@ -16,7 +16,7 @@ router.post("/orderData", async (req, res) => {
         res.json({ success: true });
       });
     } catch (error) {
-      console.log(error.message);
+      error.message;
       res.status(500).send({ error: "Server Error", message: error.message });
     }
   } else {
@@ -28,7 +28,6 @@ router.post("/orderData", async (req, res) => {
         res.json({ success: true });
       });
     } catch (error) {
-      console.log(error.message);
       res.status(500).send({ error: "Server Error", message: error.message });
     }
   }

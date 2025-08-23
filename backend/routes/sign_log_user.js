@@ -35,7 +35,6 @@ router.post("/signup", signupValidationRules, async (req, res) => {
     });
     res.json({ success: true });
   } catch (error) {
-    console.log(error);
     res.json({ success: false });
   }
 });
@@ -80,7 +79,6 @@ router.post(
 
       res.json({ success: true, authtoken });
     } catch (error) {
-      console.log(error);
       res.json({ success: false });
     }
   }
